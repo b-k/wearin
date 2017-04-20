@@ -38,10 +38,11 @@ system) long after the track is done playing. If there are several such files le
 ## Rate of decay
 The default is to insert 100 glitches with each run. Many glitchings are necessary
 because the MP3 format has a great deal of redundancy and error-checking,
-and the odds are good that most of the inserted glitches have no audible effect.
+and the odds are good that most of the inserted glitches will have no audible effect.
 
-You will find `int flips=100` at the top of `wearin.c`; adjust the number of byte-flips
-per run to your desired rate of decay.
+A hundred byte-flips will be noticeable after a few plays; ten will be noticeable after a
+few dozen plays.  You will find `int flips=100` at the top of `wearin.c`; adjust the
+number of byte-flips per run to your desired rate of decay.
 
 ## Warning!
 
