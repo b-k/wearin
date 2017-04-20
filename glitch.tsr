@@ -1,11 +1,15 @@
+#!/bin/sh
 # Use lsof (list open files) to see if any (mp3|m4a) files are in use. If so, use glitch
 # to age them. Repeat every sixty seconds, but don't reglitch the same file.
+
+# Run from the same directory the glitch program is in.
 
 Last=""
 while true; do
     File="`lsof -u $USER -F | grep "^n" | sed 's/^n//' |egrep '\.(mp3|m4a)$' | tail -1`"
 
-    if [ $File -ne "" && $File -ne $Last ]; then
+    echo "L=" $Last "F=" $File
+    if [ "$File" != "" ] && [ "$File" != "$Last" ] ; then
         ./glitch "$File"
         Last="$File"
     fi
