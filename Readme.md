@@ -50,6 +50,6 @@ noises far beyond the loudest recorded songs.
 
 ## Other warning!
 
-There is no undo! The TSR will find /any/ mp3 that your computer deems open. Unless
+There is no undo! The TSR will find _any_ mp3 that your computer deems open. Unless
 you are all in on the slow decay of your music collection, keep offline backups of
 your mp3s, and make sure `wearin.tsr` is not running when you make those backups.
