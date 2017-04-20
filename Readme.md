@@ -1,14 +1,11 @@
 # Wearin
 
-There's a phrase, 'I played that song so often I wore out the grooves'. This was in
-fact possible, just as it's possible to play a cassette tape so many times it snaps.
+There's a phrase, 'I played that song so often I wore out the grooves'—and this would
+actually happen with much-loved records. That our music slowly decays in specific ways is part
+of what makes it ours.
 
-I [BK] have music on whatever medium that already has glitches, and have grown to expect
-them. Those glitches are part of the song as I know it, a reminder of where the music
-came from. Sometimes I hear the song played without the glitch and I'm thrown off.
-
-Run the program from the command line via `wearin popsong.mp3`. It will randomly flip
-100 bytes in the song, or run the script `wearin.tsr` to automatically add wear to
+Run the program from the command line via `wearin popsong.mp3` and it will randomly flip
+100 bytes in the song. Or run the script `wearin.tsr` to automatically add wear to
 any song you play on your computer.
 
 ## Compiling
@@ -35,7 +32,7 @@ and stay resident, which is what MS DOS called these sorts of background process
 
 Bug: some music players will leave an mp3 file 'open' (according to the operating
 system) long after the track is done playing. If there are several such files left open,
-the TSR will keep wearing them down.
+`wearin.tsr` will keep wearing them down.
 
 
 ## Rate of decay
