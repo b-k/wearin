@@ -17,7 +17,6 @@ int main(int argv, char **argc){
     srand(time(NULL));
     for (int i=0; i<flips; i++){
         long int r = len * ((0.0+rand())/RAND_MAX);
-        printf("flipping %li\n", r);
 
         lseek(f, r, SEEK_SET);
         char c;

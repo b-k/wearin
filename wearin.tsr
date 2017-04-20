@@ -1,0 +1,17 @@
+#!/bin/sh
+# Use lsof (list open files) to see if any (mp3|m4a) files are in use. If so, use wearin
+# to age them. Repeat every sixty seconds, but don't reglitch the same file.
+
+# Run from the same directory the wearin program is in.
+
+Last="initial value here"
+while true; do
+    File="`lsof -u $USER -F | grep "^n" | sed 's/^n//' |egrep -i '\.(mp3|m4a)$'| grep -v "$Last" | tail -1`"
+
+    if [ "$File" != "" ] && [ "$File" != "$Last" ] ; then
+        echo "Wearing" $File
+        ./wearin "$File"
+        Last="$File"
+    fi
+    sleep 60;
+done
