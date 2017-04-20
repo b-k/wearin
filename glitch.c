@@ -4,6 +4,8 @@
 #include <fcntl.h>
 #include <time.h>
 
+int flips=100;
+
 int main(int argv, char **argc){
     if (argv<1) {fprintf(stderr, "Need a filename to glitch.\n"); exit(2);}
     int f=open(argc[1], O_RDWR);
@@ -13,7 +15,7 @@ int main(int argv, char **argc){
     printf("len=%li\n", len);
     
     srand(time(NULL));
-    for (int i=0; i<50; i++){
+    for (int i=0; i<flips; i++){
         long int r = len * ((0.0+rand())/RAND_MAX);
         printf("flipping %li\n", r);
 
