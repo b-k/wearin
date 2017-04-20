@@ -13,15 +13,17 @@ int main(int argv, char **argc){
     printf("len=%li\n", len);
     
     srandom(time(NULL));
-    long int r = len * ((0.0+random())/RAND_MAX);
-    printf("flipping %li\n", r);
+    for (int i=0; i<50; i++){
+        long int r = len * ((0.0+random())/RAND_MAX);
+        printf("flipping %li\n", r);
 
-    lseek(f, r, SEEK_SET);
-    char c;
-    read(f, &c, 1);
-    lseek(f, r, SEEK_SET);
-    c = ~(unsigned short int)c;
-    write(f, &c, 1);
+        lseek(f, r, SEEK_SET);
+        char c;
+        read(f, &c, 1);
+        lseek(f, r, SEEK_SET);
+        c = ~(unsigned short int)c;
+        write(f, &c, 1);
+    }
 
     close(f);
 }

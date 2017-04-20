@@ -1,0 +1,26 @@
+
+There's a phrase, 'played that song so often I wore out the grooves'. This was in fact
+possible, just as it's possible to play a cassette tape so many times it snaps.
+
+This program provides the equivalent with digital media. Each time it runs, e.g.
+
+glitch popsong.mp3
+
+it randomly flips 50 bytes in the song (i.e., applies a bitwise not). 
+
+
+Using it: better music players offer a pre-play and post-play hook, where you can insert
+commands. Put this there.
+
+Compiling
+
+Buckle up, because unlike Python et al, you'll have to compile this program. To do so, type
+
+`gcc glitch.c`
+
+at the command prompt. You should now see the executable `glitch` next to the source, `glitch.c`.
+
+* Why 50 bytes? Because mp3 is a surprisingly reliable format, and the odds are good that
+most of the inserted glitches have no effect at all.
+
+* Warning: don't wear headphones! Glitching can sometimes manifest in suddenly very loud noises.
