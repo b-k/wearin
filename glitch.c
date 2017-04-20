@@ -12,9 +12,9 @@ int main(int argv, char **argc){
     off_t len = lseek(f, 0, SEEK_END);
     printf("len=%li\n", len);
     
-    srandom(time(NULL));
+    srand(time(NULL));
     for (int i=0; i<50; i++){
-        long int r = len * ((0.0+random())/RAND_MAX);
+        long int r = len * ((0.0+rand())/RAND_MAX);
         printf("flipping %li\n", r);
 
         lseek(f, r, SEEK_SET);
