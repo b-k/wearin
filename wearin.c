@@ -12,17 +12,15 @@ int main(int argv, char **argc){
     if (!f) {fprintf(stderr, "Couldn't open %s\n", argc[1]); exit(3);}
 
     off_t len = lseek(f, 0, SEEK_END);
-    printf("len=%li\n", len);
     
     srand(time(NULL));
     for (int i=0; i<flips; i++){
-        long int r = len * ((0.0+rand())/RAND_MAX);
-
-        lseek(f, r, SEEK_SET);
+        long int flipme = len * ((0.0+rand())/RAND_MAX);
+        lseek(f, flipme, SEEK_SET);
         char c;
         read(f, &c, 1);
-        lseek(f, r, SEEK_SET);
         c = ~(unsigned short int)c;
+        lseek(f, flipme, SEEK_SET);
         write(f, &c, 1);
     }
 
