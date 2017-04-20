@@ -16,7 +16,7 @@ Compiling
 
 Buckle up, because unlike Python et al, you'll have to compile this program. To do so, type
 
-`gcc glitch.c`
+`make`
 
 at the command prompt. You should now see the executable `glitch` next to the source, `glitch.c`.
 
