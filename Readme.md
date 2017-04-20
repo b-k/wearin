@@ -53,3 +53,11 @@ noises far beyond the loudest recorded songs.
 There is no undo! The TSR will find _any_ mp3 that your computer deems open. Unless
 you are all in on the slow decay of your music collection, keep offline backups of
 your mp3s, and make sure `wearin.tsr` is not running when you make those backups.
+
+## A sample
+
+What does a well-glitched mp3 sound like? Here is a sample mix:
+https://github.com/b-k/large-files/raw/master/wearin-sample.mp3
+It was pasted together with Audacity, which limits the maximum volume, so it is
+listenable with headphones.
+
